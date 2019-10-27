@@ -28,7 +28,7 @@ export const WhatWeCanDoForYou = () => {
             <Grid item>
                 <h1>Cosa facciamo</h1>
             </Grid>
-            <Grid item container spacingRatio={8} xs={10} sm={8}>
+            <Grid item container spacingRatio={8} xs={11} sm={8}>
                 <Grid item xs={12} sm={4}>
                     <Card
                         title="Lorem ipsum dolor sit amet"

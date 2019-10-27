@@ -5,6 +5,7 @@ import { Grid } from "../../grid";
 export const Root = styled.div`
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
+    margin-bottom: ${props => props.theme.spacing.unit * 6}px;
 `;
 
 export const TextContainer = styled(Grid)`

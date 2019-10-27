@@ -28,17 +28,18 @@ export const Overlay = styled.div`
 
 export const WritingsGrid = styled(Grid)`
     z-index: 1;
+    text-align: center;
 `;
 
 export const Logo = styled.img`
     margin-bottom: ${props => props.theme.spacing.unit * 4}px;
     height: 100%;
-    width: ${props => props.theme.spacing.unit * 120}px;
+    width: 100%;
 `;
 
 export const Subtitle = styled.h2`
     color: #fff;
-    font-size: ${props => props.theme.spacing.unit * 6}pt;
+    font-size: ${props => props.theme.spacing.unit * 5}pt;
     margin-top: 0;
     margin-bottom: ${props => props.theme.spacing.unit * 4}px;
 `;
