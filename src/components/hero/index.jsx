@@ -44,7 +44,7 @@ export const Hero = () => {
                 </Grid>
                 <Grid item>
                     <Subtitle>
-                        <i>Per una stampa perfetta, MilleMotivi ti aspetta!</i>
+                        <i>Stampa e personalizzazione, proprio come vuoi tu...</i>
                     </Subtitle>
                 </Grid>
                 <SocialsContainer item container spacingRatio={4}>

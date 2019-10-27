@@ -14,6 +14,12 @@ module.exports = {
             }
         },
         "gatsby-transformer-sharp",
-        "gatsby-plugin-sharp"
+        "gatsby-plugin-sharp",
+        {
+            resolve: "gatsby-source-instagram",
+            options: {
+                username: "morbegno_millemotivi"
+            }
+        }
     ]
 };
