@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "./card";
 import { Grid } from "../grid";
 import { useStaticQuery, graphql } from "gatsby";
+import { Root } from "./styled";
 
 export const WhatWeCanDoForYou = () => {
     const { placeholderImage } = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ export const WhatWeCanDoForYou = () => {
     `);
 
     return (
-        <Grid
+        <Root
             id="what-do-we-do"
             container
             xs={12}
@@ -51,6 +52,6 @@ export const WhatWeCanDoForYou = () => {
                     />
                 </Grid>
             </Grid>
-        </Grid>
+        </Root>
     );
 };

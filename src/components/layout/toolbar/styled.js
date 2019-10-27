@@ -5,8 +5,8 @@ import { Link } from "gatsby";
 export const Container = styled(Grid)`
     height: ${props => props.theme.spacing.unit * 16}px;
     padding: 0 ${props => props.theme.spacing.unit * 8}px;
-    background: rgba(239, 125, 0, ${props => (props.hero ? 0 : 1)});
-    color: #fff;
+    background: rgba(255, 255, 255, ${props => (props.hero ? 0 : 1)});
+    color: ${props => (props.hero ? "#fff" : "#000")};
     box-shadow: ${props =>
         props.hero
             ? 0

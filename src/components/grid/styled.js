@@ -41,12 +41,21 @@ export const Container = styled.div`
             if (!props.container || !props.spacingRatio) {
                 return null;
             }
-            return css`
-                padding-right: ${props =>
-                    (props.theme.spacing.unit * props.spacingRatio) / 2}px;
-                padding-left: ${props =>
-                    (props.theme.spacing.unit * props.spacingRatio) / 2}px;
-            `;
+            if (props.direction === "row") {
+                return css`
+                    padding-right: ${props =>
+                        (props.theme.spacing.unit * props.spacingRatio) / 2}px;
+                    padding-left: ${props =>
+                        (props.theme.spacing.unit * props.spacingRatio) / 2}px;
+                `;
+            } else if (props.direction === "column") {
+                return css`
+                    padding-top: ${props =>
+                        (props.theme.spacing.unit * props.spacingRatio) / 2}px;
+                    padding-bottom: ${props =>
+                        (props.theme.spacing.unit * props.spacingRatio) / 2}px;
+                `;
+            }
         }}
     }
     ${props => getPercentageWidthFromRatio(props.xs)}
