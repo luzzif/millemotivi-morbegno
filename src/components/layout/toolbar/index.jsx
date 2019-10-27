@@ -4,7 +4,7 @@ import { Container, Item } from "./styled";
 import { Grid } from "../../grid";
 
 export const Toolbar = () => {
-    let scrollPosition = 0;
+    let scrollPosition = { x: 0, y: 0 };
     if (typeof window !== "undefined") {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         scrollPosition = useWindowScrollPosition();
