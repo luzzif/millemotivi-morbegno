@@ -28,7 +28,13 @@ export const InstagramFeed = () => {
     `).allInstaNode.edges;
 
     return (
-        <Grid container xs={12} align="center" direction="column">
+        <Grid
+            container
+            xs={12}
+            align="center"
+            direction="column"
+            id="our-socials"
+        >
             <Grid item>
                 <h1>Dai nostri social</h1>
             </Grid>
