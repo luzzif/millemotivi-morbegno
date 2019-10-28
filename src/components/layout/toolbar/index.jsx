@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
-import { Container, Item } from "./styled";
+import {
+    Container,
+    Item,
+    StyledMobileMenuIcon,
+    AnimatedMobileMenu
+} from "./styled";
 import { Grid } from "../../grid";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { Hidden } from "../../hidden";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Toolbar = () => {
     let scrollPosition = { x: 0, y: 0 };
@@ -25,24 +32,54 @@ export const Toolbar = () => {
     `);
 
     const [hero, setHero] = useState(scrollPosition && !scrollPosition.y);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         setHero(scrollPosition && !scrollPosition.y);
     }, [scrollPosition]);
 
+    const handleMobileMenuOpen = () => {
+        setMobileMenuOpen(true);
+    };
+
+    const handleMobileMenuClose = () => {
+        setMobileMenuOpen(false);
+    };
+
     return (
-        <Container container align="center" justify="space-between" hero={hero}>
-            <Grid item>
-                <Image fixed={logoImage.childImageSharp.fixed} />
-            </Grid>
-            <Grid item container spacingRatio={4}>
-                <Grid container item>
-                    <Item to="/#what-do-we-do">Cosa facciamo</Item>
+        <>
+            <AnimatedMobileMenu
+                open={mobileMenuOpen}
+                onClose={handleMobileMenuClose}
+            />
+            <Container
+                container
+                align="center"
+                justify="space-between"
+                hero={hero}
+            >
+                <Grid item>
+                    <Image fixed={logoImage.childImageSharp.fixed} />
                 </Grid>
-                <Grid container item>
-                    <Item to="/#our-socials">I nostri social</Item>
-                </Grid>
-            </Grid>
-        </Container>
+                <Hidden smDown>
+                    <Grid item container spacingRatio={4}>
+                        <Grid item>
+                            <Item to="/#what-do-we-do">Cosa facciamo</Item>
+                        </Grid>
+                        <Grid item>
+                            <Item to="/#our-socials">I nostri social</Item>
+                        </Grid>
+                    </Grid>
+                </Hidden>
+                <Hidden smUp>
+                    <Grid item>
+                        <StyledMobileMenuIcon
+                            icon={faBars}
+                            onClick={handleMobileMenuOpen}
+                        />
+                    </Grid>
+                </Hidden>
+            </Container>
+        </>
     );
 };

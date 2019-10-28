@@ -40,7 +40,7 @@ export const InstagramFeed = () => {
             </Grid>
             <FeedWrapper item container xs={12}>
                 {posts.slice(0, 6).map(({ node: post }, index) => (
-                    <Grid item key={post.id} xs={6} sm={3} md={2}>
+                    <Grid item key={post.id} xs={6} sm={2}>
                         {index < 5 && (
                             <SquareContainer>
                                 <InstagramPost src={post.original} />

@@ -40,10 +40,6 @@ export const Footer = () => {
                             <Grid item>P.IVA: 01011630140</Grid>
                             <Grid item>Telefono: +39 0342 1856456</Grid>
                             <Grid item>E-mail: morbegnoprint@gmail.com</Grid>
-                            <Grid item>
-                                Website made by Federico Luzzi -
-                                fedeluzzi00@gmail.com
-                            </Grid>
                             <Grid item>© 2019 Morbegnoprint S.R.L.</Grid>
                         </Grid>
                         <Grid

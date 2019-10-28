@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 export const Hidden = styled.div`
-    width: 100%;
     ${props =>
         props.xsUp &&
         css`
