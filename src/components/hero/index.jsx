@@ -44,17 +44,19 @@ export const Hero = () => {
                 </Grid>
                 <Grid item>
                     <Subtitle>
-                        <i>Stampa e personalizzazione, proprio come vuoi tu...</i>
+                        <i>
+                            Stampa e personalizzazione, proprio come vuoi tu...
+                        </i>
                     </Subtitle>
                 </Grid>
-                <SocialsContainer item container spacingRatio={4}>
+                <Grid item container spacingRatio={4}>
                     <Grid item>
                         <SocialLink type="facebook" />
                     </Grid>
                     <Grid item>
                         <SocialLink type="instagram" />
                     </Grid>
-                </SocialsContainer>
+                </Grid>
             </WritingsGrid>
         </RootGrid>
     );

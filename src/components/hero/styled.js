@@ -43,7 +43,3 @@ export const Subtitle = styled.h2`
     margin-top: 0;
     margin-bottom: ${props => props.theme.spacing.unit * 4}px;
 `;
-
-export const SocialsContainer = styled(Grid)`
-    margin-top: ${props => props.theme.spacing.unit * 16}px;
-`;
