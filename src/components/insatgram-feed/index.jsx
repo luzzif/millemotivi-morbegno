@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Grid } from "../grid";
 import {
@@ -10,17 +10,9 @@ import {
     StyledLink,
     StyledIcon
 } from "./styled";
-import useWindowSize from "@rehooks/window-size";
-import { theme } from "../../styles/theme";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 export const InstagramFeed = () => {
-    let windowSize = { outerWidth: 0 };
-    if (typeof window !== "undefined") {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        windowSize = useWindowSize();
-    }
-
     const posts = useStaticQuery(graphql`
         query {
             allInstaNode(sort: { order: DESC, fields: timestamp }) {
