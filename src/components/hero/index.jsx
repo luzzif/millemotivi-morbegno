@@ -5,7 +5,6 @@ import {
     Logo,
     RootGrid,
     WritingsGrid,
-    SocialsContainer,
     BackgroundImage
 } from "./styled";
 import { SocialLink } from "../social-link";
