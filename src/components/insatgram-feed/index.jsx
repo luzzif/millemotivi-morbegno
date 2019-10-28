@@ -35,29 +35,15 @@ export const InstagramFeed = () => {
         }
     `).allInstaNode.edges;
 
-    const [postsAmount, setPostsAmount] = useState(0);
-
-    useEffect(() => {
-        const { innerWidth } = windowSize;
-        let postsAmount = 6;
-        if (innerWidth <= theme.breakpoints.md) {
-            postsAmount = 8;
-        }
-        const rawPostsAmount = posts.length;
-        postsAmount =
-            rawPostsAmount < postsAmount ? rawPostsAmount : postsAmount;
-        setPostsAmount(postsAmount);
-    }, [posts, windowSize]);
-
     return (
         <Grid container xs={12} align="center" direction="column">
             <Grid item>
                 <h1>Dai nostri social</h1>
             </Grid>
             <FeedWrapper item container xs={12}>
-                {posts.slice(0, postsAmount).map(({ node: post }, index) => (
+                {posts.slice(0, 6).map(({ node: post }, index) => (
                     <Grid item key={post.id} xs={6} sm={3} md={2}>
-                        {index < postsAmount - 1 && (
+                        {index < 5 && (
                             <SquareContainer>
                                 <InstagramPost src={post.original} />
                                 <PostOverlay
@@ -89,7 +75,7 @@ export const InstagramFeed = () => {
                                 </PostOverlay>
                             </SquareContainer>
                         )}
-                        {index === postsAmount - 1 && (
+                        {index === 5 && (
                             <SquareContainer>
                                 <ShowMoreContainer
                                     container
