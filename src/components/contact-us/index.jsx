@@ -58,6 +58,7 @@ export const ContactUs = () => {
                 direction="column"
                 align="center"
                 spacingRatio={8}
+                xs={11}
                 md={10}
                 lg={6}
             >
