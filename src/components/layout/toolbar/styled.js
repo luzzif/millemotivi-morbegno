@@ -38,6 +38,6 @@ export const AnimatedMobileMenu = styled(MobileMenu)`
     top: ${props => (props.open ? "0" : "-100%")};
     background: #fff;
     color: #000;
-    transition: top ease 0.2s;
+    transition: top ease 0.3s;
     z-index: 11;
 `;

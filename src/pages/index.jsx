@@ -7,7 +7,7 @@ import { InstagramFeed } from "../components/insatgram-feed";
 
 const Index = () => (
     <Layout>
-        <Seo title="Home" />
+        <Seo />
         <Hero />
         <WhatWeCanDoForYou />
         <InstagramFeed />
