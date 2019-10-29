@@ -13,6 +13,11 @@ export const MobileMenu = ({ onClose, ...rest }) => (
                 </Item>
             </Grid>
             <Grid item>
+                <Item to="/#contact-us" onClick={onClose}>
+                    Contattaci
+                </Item>
+            </Grid>
+            <Grid item>
                 <Item to="/#our-socials" onClick={onClose}>
                     I nostri social
                 </Item>

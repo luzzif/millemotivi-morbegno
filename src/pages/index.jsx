@@ -4,12 +4,14 @@ import { Hero } from "../components/hero";
 import { Layout } from "../components/layout";
 import { WhatWeCanDoForYou } from "../components/what-do-we-do";
 import { InstagramFeed } from "../components/insatgram-feed";
+import { ContactUs } from "../components/contact-us";
 
 const Index = () => (
     <Layout>
         <Seo />
         <Hero />
         <WhatWeCanDoForYou />
+        <ContactUs />
         <InstagramFeed />
     </Layout>
 );

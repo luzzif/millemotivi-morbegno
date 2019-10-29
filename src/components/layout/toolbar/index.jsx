@@ -67,6 +67,9 @@ export const Toolbar = () => {
                             <Item to="/#what-do-we-do">Cosa facciamo</Item>
                         </Grid>
                         <Grid item>
+                            <Item to="/#contact-us">Contattaci</Item>
+                        </Grid>
+                        <Grid item>
                             <Item to="/#our-socials">I nostri social</Item>
                         </Grid>
                     </Grid>
