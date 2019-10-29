@@ -13,7 +13,7 @@ const cards = [
     },
     {
         key: "wearing",
-        title: "Abbigliamento",
+        title: "Vestiario",
         description:
             "Fai parte di una squadra sportiva, sei il titolare di un'azienda o semplicemente hai un evento da ricordare? Scegli il capo d'abbigliamento più adatto a te, la grafica che più ti piace e il gioco è fatto."
     },
