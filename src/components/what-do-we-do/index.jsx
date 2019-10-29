@@ -50,7 +50,7 @@ export const WhatWeCanDoForYou = () => {
             <Grid item>
                 <h1>Cosa facciamo</h1>
             </Grid>
-            <Grid item container spacingRatio={8} xs={11} md={8}>
+            <Grid item container spacingRatio={8} xs={11} md={10} lg={8}>
                 {cards.map(card => (
                     <Grid item xs={12} sm={4} key={card.key}>
                         <Card

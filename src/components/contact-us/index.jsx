@@ -44,7 +44,7 @@ export const ContactUs = () => {
             <Grid item>
                 <h1>Contattaci</h1>
             </Grid>
-            <TextGrid item xs={11} md={6} justify="center">
+            <TextGrid item xs={11} md={10} lg={6} justify="center">
                 Per maggiori informazioni o per avere un preventivo,{" "}
                 <StyledLink href="tel:+390342601203">
                     chiamaci al +39 0342 601203
@@ -58,8 +58,8 @@ export const ContactUs = () => {
                 direction="column"
                 align="center"
                 spacingRatio={8}
-                xs={11}
-                md={6}
+                md={10}
+                lg={6}
             >
                 <Grid item xs={12}>
                     <Input
