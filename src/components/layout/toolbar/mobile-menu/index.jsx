@@ -19,7 +19,7 @@ export const MobileMenu = ({ onClose, ...rest }) => (
             </Grid>
             <Grid item>
                 <Item to="/#our-socials" onClick={onClose}>
-                    I nostri social
+                    Dai nostri social
                 </Item>
             </Grid>
         </Grid>

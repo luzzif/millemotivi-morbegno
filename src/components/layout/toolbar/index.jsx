@@ -70,7 +70,7 @@ export const Toolbar = () => {
                             <Item to="/#contact-us">Contattaci</Item>
                         </Grid>
                         <Grid item>
-                            <Item to="/#our-socials">I nostri social</Item>
+                            <Item to="/#our-socials">Dai nostri social</Item>
                         </Grid>
                     </Grid>
                 </Hidden>
