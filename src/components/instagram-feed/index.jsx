@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Grid } from "../grid";
 import {
     InstagramPost,
     SquareContainer,
-    FeedWrapper,
     ShowMoreContainer,
     PostOverlay,
     StyledLink,
     StyledIcon
 } from "./styled";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { theme } from "../../styles/theme";
+import useWindowSize from "@rehooks/window-size";
 
 export const InstagramFeed = () => {
+    let windowSize = { outerWidth: 0 };
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        windowSize = useWindowSize();
+    }
+
     const posts = useStaticQuery(graphql`
         query {
             allInstaNode(sort: { order: DESC, fields: timestamp }) {
@@ -27,6 +34,20 @@ export const InstagramFeed = () => {
         }
     `).allInstaNode.edges;
 
+    const [postsAmount, setPostsAmount] = useState(0);
+
+    useEffect(() => {
+        const { innerWidth } = windowSize;
+        let postsAmount = 6;
+        if (innerWidth <= theme.breakpoints.md) {
+            postsAmount = 4;
+        }
+        const rawPostsAmount = posts.length;
+        postsAmount =
+            rawPostsAmount < postsAmount ? rawPostsAmount : postsAmount;
+        setPostsAmount(postsAmount);
+    }, [posts, windowSize]);
+
     return (
         <Grid
             container
@@ -38,10 +59,10 @@ export const InstagramFeed = () => {
             <Grid item>
                 <h1>Dai nostri social</h1>
             </Grid>
-            <FeedWrapper item container xs={12}>
-                {posts.slice(0, 6).map(({ node: post }, index) => (
-                    <Grid item key={post.id} xs={6} sm={2}>
-                        {index < 5 && (
+            <Grid item container xs={12}>
+                {posts.slice(0, postsAmount).map(({ node: post }, index) => (
+                    <Grid item key={post.id} xs={6} sm={3} md={2}>
+                        {index < postsAmount - 1 && (
                             <SquareContainer>
                                 <InstagramPost src={post.original} />
                                 <PostOverlay
@@ -73,7 +94,7 @@ export const InstagramFeed = () => {
                                 </PostOverlay>
                             </SquareContainer>
                         )}
-                        {index === 5 && (
+                        {index === postsAmount - 1 && (
                             <SquareContainer>
                                 <ShowMoreContainer
                                     container
@@ -92,7 +113,7 @@ export const InstagramFeed = () => {
                         )}
                     </Grid>
                 ))}
-            </FeedWrapper>
+            </Grid>
         </Grid>
     );
 };

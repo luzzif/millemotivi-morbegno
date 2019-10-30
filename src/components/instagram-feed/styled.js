@@ -7,7 +7,6 @@ export const SquareContainer = styled.div`
     height: 100%;
     position: relative;
     padding-top: 100%;
-    margin: ${props => props.theme.spacing.unit / 2}px;
 `;
 
 export const InstagramPost = styled.div`
@@ -45,10 +44,6 @@ export const StyledLink = styled.a`
     text-decoration: none;
     color: inherit;
     font-size: ${props => props.theme.spacing.unit * 4}pt;
-`;
-
-export const FeedWrapper = styled(Grid)`
-    padding: ${props => props.theme.spacing.unit / 2}px;
 `;
 
 export const ShowMoreContainer = styled(Grid)`
