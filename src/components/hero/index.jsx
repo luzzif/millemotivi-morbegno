@@ -17,7 +17,7 @@ export const Hero = () => {
         query {
             heroImage: file(relativePath: { eq: "hero.jpg" }) {
                 childImageSharp {
-                    fluid {
+                    fluid(quality: 90) {
                         ...GatsbyImageSharpFluid
                     }
                 }
