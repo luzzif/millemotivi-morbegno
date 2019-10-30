@@ -38,7 +38,7 @@ export const Hero = () => {
                 spacingRatio={4}
                 xs={11}
             >
-                <Grid item xs={10} sm={8} md={4}>
+                <Grid item xs={10} sm={8} md={6} lg={4}>
                     <Logo src={logoImage} />
                 </Grid>
                 <Grid item>
