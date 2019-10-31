@@ -31,6 +31,7 @@ export const StyledLink = styled.a`
     color: rgb(239, 124, 0);
     font-weight: 700;
     font-style: italic;
+    margin-left: ${props => props.theme.spacing.unit}px;
 `;
 
 export const SubmitButton = styled.button`
