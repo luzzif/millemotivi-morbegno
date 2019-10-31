@@ -1,4 +1,4 @@
-require("./src/styles/index.css");
+require("./static/index.css");
 
 if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]', {
