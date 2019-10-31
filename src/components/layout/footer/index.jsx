@@ -38,7 +38,7 @@ export const Footer = () => {
                         >
                             <Grid item>Via San Rocco 62, 23017, Morbegno</Grid>
                             <Grid item>P.IVA: 01011630140</Grid>
-                            <Grid item>Telefono: +39 0342 1856456</Grid>
+                            <Grid item>Telefono: +39 0342 601203</Grid>
                             <Grid item>E-mail: morbegnoprint@gmail.com</Grid>
                             <Grid item>© 2019 Morbegnoprint S.R.L.</Grid>
                         </Grid>
