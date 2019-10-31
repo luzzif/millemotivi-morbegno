@@ -5,14 +5,21 @@ import { Layout } from "../components/layout";
 import { WhatWeCanDoForYou } from "../components/what-do-we-do";
 import { InstagramFeed } from "../components/instagram-feed";
 import { ContactUs } from "../components/contact-us";
+import { Section } from "../components/section";
 
 const Index = () => (
     <Layout>
         <Seo />
         <Hero />
-        <WhatWeCanDoForYou />
-        <ContactUs />
-        <InstagramFeed />
+        <Section>
+            <WhatWeCanDoForYou />
+        </Section>
+        <Section>
+            <ContactUs />
+        </Section>
+        <Section>
+            <InstagramFeed />
+        </Section>
     </Layout>
 );
 

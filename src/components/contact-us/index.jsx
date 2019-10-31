@@ -2,6 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import { Grid } from "../grid";
 import { Input, StyledLink, TextArea, SubmitButton, TextGrid } from "./styled";
 import emailValidator from "email-validator";
+import { Title } from "../title";
 
 export const ContactUs = () => {
     const [name, setName] = useState("");
@@ -42,9 +43,9 @@ export const ContactUs = () => {
             spacingRatio={4}
         >
             <Grid item>
-                <h1>Contattaci</h1>
+                <Title>Contattaci</Title>
             </Grid>
-            <TextGrid item xs={11} md={10} lg={6} justify="center">
+            <TextGrid item xs={11} md={10} lg={8} xl={4} justify="center">
                 Per maggiori informazioni o per avere un preventivo, chiamaci al
                 <StyledLink href="tel:+390342601203">
                     +39 0342 601203
@@ -59,9 +60,9 @@ export const ContactUs = () => {
                 align="center"
                 spacingRatio={8}
                 xs={11}
-                sm={10}
                 md={8}
                 lg={6}
+                xl={3}
             >
                 <Grid item xs={12}>
                     <Input

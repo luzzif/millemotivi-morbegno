@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Grid } from "../../grid";
-import { Title, Root, Description, Image, TextContainer } from "./styled";
+import { Root, Description, Image, TextContainer } from "./styled";
+import { Title } from "../../title";
 
 export const Card = ({ image, title, description }) => (
     <Root container direction="column" spacingRatio={8}>
@@ -15,7 +16,7 @@ export const Card = ({ image, title, description }) => (
             xs={12}
             spacingRatio={4}
         >
-            <Title>{title}</Title>
+            <Title small>{title}</Title>
             <Description>{description}</Description>
         </TextContainer>
     </Root>

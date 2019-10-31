@@ -5,19 +5,15 @@ import { Grid } from "../../grid";
 export const Root = styled.div`
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
-    margin-bottom: ${props => props.theme.spacing.unit * 6}px;
 `;
 
 export const TextContainer = styled(Grid)`
     padding: ${props => props.theme.spacing.unit * 6}px;
 `;
 
-export const Title = styled.h2`
-    margin: 0;
-`;
-
 export const Description = styled.p`
     margin-bottom: 0;
+    margin-top: ${props => props.theme.spacing.unit * 4}px;
 `;
 
 export const Image = styled(Img)`

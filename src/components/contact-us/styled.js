@@ -8,9 +8,9 @@ export const Input = styled.input`
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
     font-size: ${props => props.theme.spacing.unit * 4}px;
+    outline: none;
     ::placeholder {
         color: #000;
-        font-family: Montserrat;
     }
 `;
 
@@ -21,9 +21,9 @@ export const TextArea = styled.textarea`
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
     font-size: ${props => props.theme.spacing.unit * 4}px;
+    outline: none;
     ::placeholder {
         color: #000;
-        font-family: Montserrat;
     }
 `;
 
@@ -44,7 +44,6 @@ export const SubmitButton = styled.button`
     text-decoration: none;
     transition: box-shadow ease 0.3s, background ease 0.3s, color ease 0.3s;
     font-size: ${props => props.theme.spacing.unit * 4}px;
-    font-family: Montserrat;
     border: none;
     :hover:not(:disabled) {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),

@@ -2,7 +2,8 @@ import React from "react";
 import { Card } from "./card";
 import { Grid } from "../grid";
 import { useStaticQuery, graphql } from "gatsby";
-import { Root } from "./styled";
+import { Title } from "../title";
+import { Hidden } from "../hidden";
 
 export const WhatWeCanDoForYou = () => {
     const {
@@ -62,28 +63,60 @@ export const WhatWeCanDoForYou = () => {
     ];
 
     return (
-        <Root
+        <Grid
             id="what-do-we-do"
             container
             xs={12}
             align="center"
             direction="column"
-            spacingRatio={4}
+            spacingRatio={8}
         >
             <Grid item>
-                <h1>Cosa facciamo</h1>
+                <Title>Cosa facciamo</Title>
             </Grid>
-            <Grid item container spacingRatio={8} xs={11} md={10} lg={8}>
-                {cards.map(card => (
-                    <Grid item xs={12} sm={4} key={card.key}>
-                        <Card
-                            title={card.title}
-                            description={card.description}
-                            image={card.image}
-                        />
+            <Hidden smDown>
+                <Grid item container justify="center" xs={12}>
+                    <Grid
+                        item
+                        container
+                        spacingRatio={8}
+                        xs={11}
+                        md={10}
+                        lg={8}
+                        xl={4}
+                    >
+                        {cards.map(card => (
+                            <Grid item xs={12} sm={4} key={card.key}>
+                                <Card
+                                    title={card.title}
+                                    description={card.description}
+                                    image={card.image}
+                                />
+                            </Grid>
+                        ))}
                     </Grid>
-                ))}
-            </Grid>
-        </Root>
+                </Grid>
+            </Hidden>
+            <Hidden smUp>
+                <Grid
+                    item
+                    container
+                    direction="column"
+                    align="center"
+                    spacingRatio={8}
+                    xs={12}
+                >
+                    {cards.map(card => (
+                        <Grid item xs={11} key={card.key}>
+                            <Card
+                                title={card.title}
+                                description={card.description}
+                                image={card.image}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Hidden>
+        </Grid>
     );
 };
