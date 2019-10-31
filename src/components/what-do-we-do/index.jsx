@@ -4,39 +4,62 @@ import { Grid } from "../grid";
 import { useStaticQuery, graphql } from "gatsby";
 import { Root } from "./styled";
 
-const cards = [
-    {
-        key: "gadget",
-        title: "Gadget",
-        description:
-            "Cerchi la soluzione vincente per valorizzare la tua azienda? Millemotivi fa al caso tuo! A disposizione per voi una vasta scelta di prodotti da personalizzare, dalla classica penna all'accessorio di ultima generazione."
-    },
-    {
-        key: "wearing",
-        title: "Vestiario",
-        description:
-            "Fai parte di una squadra sportiva, sei il titolare di un'azienda o semplicemente hai un evento da ricordare? Scegli il capo d'abbigliamento più adatto a te, la grafica che più ti piace e il gioco è fatto."
-    },
-    {
-        key: "digital-print",
-        title: "Stampa digitale",
-        description:
-            "Dalla stampa di manifesti, banner ed etichette, alla personalizzazione di vetrine, insegne e automezzi. Questi sono solo alcuni dei servizi che offriamo; vi seguiamo dalla realizzazione della grafica alla scelta del supporto più adatto a te."
-    }
-];
-
 export const WhatWeCanDoForYou = () => {
-    const { placeholderImage } = useStaticQuery(graphql`
+    const {
+        gadgetImage,
+        wearingImage,
+        digitalPrintingImage
+    } = useStaticQuery(graphql`
         query {
-            placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
+            gadgetImage: file(relativePath: { eq: "gadget.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 500, maxHeight: 500) {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            digitalPrintingImage: file(
+                relativePath: { eq: "digital-printing.jpg" }
+            ) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            wearingImage: file(relativePath: { eq: "wearing.jpg" }) {
+                childImageSharp {
+                    fluid {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
         }
     `);
+
+    const cards = [
+        {
+            key: "gadget",
+            title: "Gadget",
+            description:
+                "Cerchi la soluzione vincente per valorizzare la tua azienda? Millemotivi fa al caso tuo! A disposizione per voi una vasta scelta di prodotti da personalizzare, dalla classica penna all'accessorio di ultima generazione.",
+            image: gadgetImage.childImageSharp.fluid
+        },
+        {
+            key: "wearing",
+            title: "Vestiario",
+            description:
+                "Fai parte di una squadra sportiva, sei il titolare di un'azienda o semplicemente hai un evento da ricordare? Scegli il capo d'abbigliamento più adatto a te, la grafica che più ti piace e il gioco è fatto.",
+            image: wearingImage.childImageSharp.fluid
+        },
+        {
+            key: "digital-print",
+            title: "Stampa digitale",
+            description:
+                "Dalla stampa di manifesti, banner ed etichette, alla personalizzazione di vetrine, insegne e automezzi. Questi sono solo alcuni dei servizi che offriamo; vi seguiamo dalla realizzazione della grafica alla scelta del supporto più adatto a te.",
+            image: digitalPrintingImage.childImageSharp.fluid
+        }
+    ];
 
     return (
         <Root
@@ -56,7 +79,7 @@ export const WhatWeCanDoForYou = () => {
                         <Card
                             title={card.title}
                             description={card.description}
-                            image={placeholderImage.childImageSharp.fluid}
+                            image={card.image}
                         />
                     </Grid>
                 ))}
