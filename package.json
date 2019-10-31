@@ -1,7 +1,7 @@
 {
-    "name": "millemotivi-morbegno",
+    "name": "morbegnoprint-website",
     "private": true,
-    "description": "Website for MilleMotivi Morbegno.",
+    "description": "Website for MorbegnoPrint.",
     "version": "0.1.0",
     "author": "Federico Luzzi <fedeluzzi00@gmail.com>",
     "dependencies": {

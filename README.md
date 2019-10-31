@@ -1,3 +1,3 @@
-# MilleMotivi Morbegno
+# MorbegnoPrint website
 
-Website for MilleMotivi Morbegno.
+Website for MorbegnoPrint.
