@@ -68,14 +68,11 @@ export const Seo = ({ lang, meta }) => {
 };
 
 Seo.defaultProps = {
-    lang: "en",
-    meta: [],
-    description: ""
+    lang: "it",
+    meta: []
 };
 
 Seo.propTypes = {
-    description: PropTypes.string,
     lang: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired
+    meta: PropTypes.arrayOf(PropTypes.object)
 };
