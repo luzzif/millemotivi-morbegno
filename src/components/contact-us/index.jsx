@@ -3,6 +3,7 @@ import { Grid } from "../grid";
 import { Input, StyledLink, TextArea, SubmitButton, TextGrid } from "./styled";
 import emailValidator from "email-validator";
 import { Title } from "../title";
+import { mailForwarderClient } from "../../clients";
 
 export const ContactUs = () => {
     const [name, setName] = useState("");
@@ -10,10 +11,19 @@ export const ContactUs = () => {
     const [text, setText] = useState("");
     const [submitEnabled, setSubmitEnable] = useState("");
 
+    const sendMail = async (from, name, text) => {
+        try {
+            await mailForwarderClient.post("/api/v1/emails", {
+                from,
+                name,
+                text
+            });
+        } catch (error) {}
+    };
+
     const handleSubmit = useCallback(() => {
-        // TODO: finalize submission logic.
-        console.log("clicked");
-    }, []);
+        sendMail(email, name, text);
+    }, [email, name, text]);
 
     const handleNameChange = event => {
         setName(event.target.value);
