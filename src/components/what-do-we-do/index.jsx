@@ -107,7 +107,7 @@ export const WhatWeCanDoForYou = () => {
                     xs={12}
                 >
                     {cards.map(card => (
-                        <Grid item xs={11} key={card.key}>
+                        <Grid item xs={10} key={card.key}>
                             <Card
                                 title={card.title}
                                 description={card.description}
