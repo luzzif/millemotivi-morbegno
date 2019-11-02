@@ -1,3 +1,3 @@
-# MorbegnoPrint website
+# Morbegnoprint website
 
-Website for MorbegnoPrint.
+Website for Morbegnoprint.

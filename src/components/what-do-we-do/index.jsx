@@ -43,7 +43,7 @@ export const WhatWeCanDoForYou = () => {
             key: "gadget",
             title: "Gadget",
             description:
-                "Cerchi la soluzione vincente per valorizzare la tua azienda? MorbegnoPrint fa al caso tuo! A disposizione per voi una vasta scelta di prodotti da personalizzare, dalla classica penna all'accessorio di ultima generazione.",
+                "Cerchi la soluzione vincente per valorizzare la tua azienda? Morbegnoprint fa al caso tuo! A disposizione per voi una vasta scelta di prodotti da personalizzare, dalla classica penna all'accessorio di ultima generazione.",
             image: gadgetImage.childImageSharp.fluid
         },
         {
