@@ -11,6 +11,7 @@ import { SocialLink } from "../social-link";
 import { Grid } from "../grid";
 import { useStaticQuery, graphql } from "gatsby";
 import logoImage from "../../images/logo.svg";
+import { Hidden } from "../hidden";
 
 export const Hero = () => {
     const { heroImage } = useStaticQuery(graphql`
@@ -51,14 +52,32 @@ export const Hero = () => {
                         </i>
                     </Subtitle>
                 </Grid>
-                <Grid item container spacingRatio={4}>
-                    <Grid item>
-                        <SocialLink type="facebook" />
+                <Hidden smUp>
+                    <Grid
+                        item
+                        container
+                        direction="column"
+                        justify="center"
+                        spacingRatio={4}
+                    >
+                        <Grid item>
+                            <SocialLink type="facebook" />
+                        </Grid>
+                        <Grid item>
+                            <SocialLink type="instagram" />
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <SocialLink type="instagram" />
+                </Hidden>
+                <Hidden smDown>
+                    <Grid item container spacingRatio={4}>
+                        <Grid item>
+                            <SocialLink type="facebook" />
+                        </Grid>
+                        <Grid item>
+                            <SocialLink type="instagram" />
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Hidden>
             </WritingsGrid>
         </RootGrid>
     );
