@@ -8,3 +8,7 @@ export const Root = styled(Grid)`
     box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     color: #fff;
 `;
+
+export const ContactsSubtitle = styled.h3`
+    color: #ef7c00;
+`;

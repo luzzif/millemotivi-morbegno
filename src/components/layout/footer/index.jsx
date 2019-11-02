@@ -1,5 +1,5 @@
 import React from "react";
-import { Root } from "./styled";
+import { Root, ContactsSubtitle } from "./styled";
 import { Grid } from "../../grid";
 import { SocialLink } from "../../social-link";
 import { Hidden } from "../../hidden";
@@ -29,6 +29,7 @@ export const Footer = () => {
                         xs={11}
                         sm={10}
                         justify="space-between"
+                        align="center"
                     >
                         <Grid
                             item
@@ -36,11 +37,25 @@ export const Footer = () => {
                             direction="column"
                             spacingRatio={2}
                         >
-                            <Grid item>Via San Rocco 62, 23017, Morbegno</Grid>
-                            <Grid item>P.IVA: 01011630140</Grid>
-                            <Grid item>Telefono: +39 0342 601203</Grid>
-                            <Grid item>E-mail: morbegnoprint@gmail.com</Grid>
-                            <Grid item>© 2019 Morbegnoprint S.R.L.</Grid>
+                            <Grid item>
+                                <ContactsSubtitle>CONTATTI</ContactsSubtitle>
+                            </Grid>
+                            <Grid item>
+                                <strong>Sede legale</strong>: Via San Rocco 62,
+                                23017, Morbegno
+                            </Grid>
+                            <Grid item>
+                                <strong>Partita IVA</strong>: 01011630140
+                            </Grid>
+                            <Grid item>
+                                <strong>Telefono</strong>: +39 0342 601203
+                            </Grid>
+                            <Grid item>
+                                <strong>E-mail</strong>: morbegnoprint@gmail.com
+                            </Grid>
+                            <Grid item>
+                                <strong>© 2019 Morbegnoprint S.R.L.</strong>
+                            </Grid>
                         </Grid>
                         <Grid
                             item
@@ -84,6 +99,9 @@ export const Footer = () => {
                             xs={12}
                             align="center"
                         >
+                            <Grid item>
+                                <ContactsSubtitle>CONTATTI</ContactsSubtitle>
+                            </Grid>
                             <Grid item>Via San Rocco 62, 23017, Morbegno</Grid>
                             <Grid item>P.IVA: 01011630140</Grid>
                             <Grid item>Telefono: +39 0342 601203</Grid>

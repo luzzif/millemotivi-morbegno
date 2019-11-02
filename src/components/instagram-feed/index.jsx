@@ -96,19 +96,19 @@ export const InstagramFeed = () => {
                         )}
                         {index === postsAmount - 1 && (
                             <SquareContainer>
-                                <ShowMoreContainer
-                                    container
-                                    justify="center"
-                                    align="center"
+                                <StyledLink
+                                    href="https://instagram.com/morbegno_millemotivi?igshid=c4q7ewup72w2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    <StyledLink
-                                        href="https://instagram.com/morbegno_millemotivi?igshid=c4q7ewup72w2"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <ShowMoreContainer
+                                        container
+                                        justify="center"
+                                        align="center"
                                     >
-                                        Mostra tutti
-                                    </StyledLink>
-                                </ShowMoreContainer>
+                                        <strong>Mostra tutti...</strong>
+                                    </ShowMoreContainer>
+                                </StyledLink>
                             </SquareContainer>
                         )}
                     </Grid>
