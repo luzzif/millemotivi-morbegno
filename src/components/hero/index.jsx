@@ -42,7 +42,7 @@ export const Hero = () => {
                 xs={11}
             >
                 <Grid item xs={10} sm={8} md={6} lg={4}>
-                    <Logo src={logoImage} />
+                    <Logo src={logoImage} alt="Logo" />
                 </Grid>
                 <Grid item>
                     <Subtitle>
