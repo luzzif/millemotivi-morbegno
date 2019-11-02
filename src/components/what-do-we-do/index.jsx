@@ -74,7 +74,7 @@ export const WhatWeCanDoForYou = () => {
             <Grid item>
                 <Title>Cosa facciamo</Title>
             </Grid>
-            <Hidden smDown>
+            <Hidden mdDown>
                 <Grid item container justify="center" xs={12}>
                     <Grid
                         item
@@ -97,7 +97,7 @@ export const WhatWeCanDoForYou = () => {
                     </Grid>
                 </Grid>
             </Hidden>
-            <Hidden smUp>
+            <Hidden mdUp>
                 <Grid
                     item
                     container
@@ -107,7 +107,7 @@ export const WhatWeCanDoForYou = () => {
                     xs={12}
                 >
                     {cards.map(card => (
-                        <Grid item xs={10} key={card.key}>
+                        <Grid item xs={10} sm={6} key={card.key}>
                             <Card
                                 title={card.title}
                                 description={card.description}
