@@ -61,6 +61,11 @@ export const Seo = () => {
                     rel: "shortcut icon",
                     type: "image/png",
                     href: `${favicon64.childImageSharp.fixed.base64}`
+                },
+                {
+                    href:
+                        "https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap",
+                    rel: "stylesheet"
                 }
             ]}
             meta={[
@@ -74,11 +79,6 @@ export const Seo = () => {
                         "morbegnoprint, digital, printing, stampa, digitale"
                 }
             ]}
-        >
-            <link
-                href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-                rel="stylesheet"
-            />
-        </Helmet>
+        />
     );
 };
