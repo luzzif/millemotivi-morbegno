@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: "Morbegnoprint",
+        title: "Morbegnoprint | Stampa e personalizzazione",
         description:
             "Da Morbegnoprint trovi tutto quello che desideri sul mondo della stampa digitale. Morbegnoprint... stampa e personalizzazione, proprio come vuoi tu.",
         author: "@luzzif"
