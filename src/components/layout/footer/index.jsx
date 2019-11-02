@@ -1,5 +1,5 @@
 import React from "react";
-import { Root, ContactsSubtitle } from "./styled";
+import { Root, ContactsSubtitle, StyledLink } from "./styled";
 import { Grid } from "../../grid";
 import { SocialLink } from "../../social-link";
 import { Hidden } from "../../hidden";
@@ -21,7 +21,7 @@ export const Footer = () => {
 
     return (
         <>
-            <Hidden smDown>
+            <Hidden mdDown>
                 <Root container justify="center">
                     <Grid
                         item
@@ -48,10 +48,16 @@ export const Footer = () => {
                                 <strong>Partita IVA</strong>: 01011630140
                             </Grid>
                             <Grid item>
-                                <strong>Telefono</strong>: +39 0342 601203
+                                <strong>Telefono</strong>:{" "}
+                                <StyledLink href="tel:+390342601203">
+                                    +39 0342 601203
+                                </StyledLink>
                             </Grid>
                             <Grid item>
-                                <strong>E-mail</strong>: morbegnoprint@gmail.com
+                                <strong>E-mail</strong>:{" "}
+                                <StyledLink href="mailto:morbegnoprint@gmail.com">
+                                    morbegnoprint@gmail.com
+                                </StyledLink>
                             </Grid>
                             <Grid item>
                                 <strong>© 2019 Morbegnoprint S.R.L.</strong>
@@ -76,11 +82,27 @@ export const Footer = () => {
                                     alt="Extended logo"
                                 />
                             </Grid>
+                            <Grid
+                                item
+                                container
+                                spacingRatio={2}
+                                align="flex-end"
+                                direction="column"
+                            >
+                                <Grid item>
+                                    <strong>Website by Federico Luzzi</strong>
+                                </Grid>
+                                <Grid item>
+                                    <StyledLink href="mailto:fedeluzzi00@gmail.com">
+                                        fedeluzzi00@gmail.com
+                                    </StyledLink>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Root>
             </Hidden>
-            <Hidden smUp>
+            <Hidden mdUp>
                 <Root container justify="center">
                     <Grid
                         item
@@ -102,11 +124,28 @@ export const Footer = () => {
                             <Grid item>
                                 <ContactsSubtitle>CONTATTI</ContactsSubtitle>
                             </Grid>
+                            <Grid item>
+                                <strong>Sede legale</strong>:
+                            </Grid>
                             <Grid item>Via San Rocco 62, 23017, Morbegno</Grid>
-                            <Grid item>P.IVA: 01011630140</Grid>
-                            <Grid item>Telefono: +39 0342 601203</Grid>
-                            <Grid item>E-mail: morbegnoprint@gmail.com</Grid>
-                            <Grid item>© 2019 Morbegnoprint S.R.L.</Grid>
+                            <Grid item>
+                                <strong>Partita IVA</strong>: 01011630140
+                            </Grid>
+                            <Grid item>
+                                <strong>Telefono</strong>:{" "}
+                                <StyledLink href="tel:+390342601203">
+                                    +39 0342 601203
+                                </StyledLink>
+                            </Grid>
+                            <Grid item>
+                                <strong>E-mail</strong>:{" "}
+                                <StyledLink href="mailto:morbegnoprint@gmail.com">
+                                    morbegnoprint@gmail.com
+                                </StyledLink>
+                            </Grid>
+                            <Grid item>
+                                <strong>© 2019 Morbegnoprint S.R.L.</strong>
+                            </Grid>
                         </Grid>
                         <Grid
                             item
@@ -127,6 +166,23 @@ export const Footer = () => {
                                 fixed={logoImage.childImageSharp.fixed}
                                 alt="Mini logo"
                             />
+                        </Grid>
+                        <Grid
+                            item
+                            container
+                            spacingRatio={4}
+                            align="center"
+                            direction="column"
+                        >
+                            <Grid item>
+                                <strong>Website made by Federico Luzzi</strong>
+                            </Grid>
+                            <Grid item>
+                                <strong>E-mail</strong>:{" "}
+                                <StyledLink href="mailto:fedeluzzi00@gmail.com">
+                                    fedeluzzi00@gmail.com
+                                </StyledLink>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Root>

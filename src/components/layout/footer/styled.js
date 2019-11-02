@@ -12,3 +12,10 @@ export const Root = styled(Grid)`
 export const ContactsSubtitle = styled.h3`
     color: #ef7c00;
 `;
+
+export const StyledLink = styled.a`
+    color: rgb(239, 124, 0);
+    font-weight: 700;
+    font-style: italic;
+    margin-left: ${props => props.theme.spacing.unit}px;
+`;
