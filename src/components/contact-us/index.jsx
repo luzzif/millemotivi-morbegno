@@ -79,6 +79,7 @@ export const ContactUs = () => {
                         type="text"
                         placeholder="Nome"
                         onChange={handleNameChange}
+                        aria-label="Nome"
                     />
                 </Grid>
                 <Grid item xs={12}>
@@ -86,12 +87,14 @@ export const ContactUs = () => {
                         type="text"
                         placeholder="E-mail"
                         onChange={handleEmailChange}
+                        aria-label="E-mail"
                     />
                 </Grid>
                 <Grid item xs={12}>
                     <TextArea
                         placeholder="Cosa desideri?"
                         onChange={handleTextChange}
+                        aria-label="Cosa desideri?"
                     />
                 </Grid>
                 <Grid item>
