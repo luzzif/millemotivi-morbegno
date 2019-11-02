@@ -3,7 +3,8 @@ module.exports = {
         title: "Morbegnoprint | Stampa e personalizzazione",
         description:
             "Da Morbegnoprint trovi tutto quello che desideri sul mondo della stampa digitale. Morbegnoprint... stampa e personalizzazione, proprio come vuoi tu.",
-        author: "@luzzif"
+        author: "@luzzif",
+        siteUrl: "https://www.morbegnoprint.it"
     },
     plugins: [
         "gatsby-plugin-react-helmet",
@@ -28,6 +29,7 @@ module.exports = {
                 pathToConfigModule: `src/utils/typography`
             }
         },
-        "gatsby-plugin-styled-components"
+        "gatsby-plugin-styled-components",
+        "gatsby-plugin-sitemap"
     ]
 };
