@@ -58,6 +58,7 @@ export const Footer = () => {
                             <Grid item>
                                 <Image
                                     fixed={logoImage.childImageSharp.fixed}
+                                    alt="Extended logo"
                                 />
                             </Grid>
                         </Grid>
@@ -104,7 +105,10 @@ export const Footer = () => {
                             </Grid>
                         </Grid>
                         <Grid item>
-                            <Image fixed={logoImage.childImageSharp.fixed} />
+                            <Image
+                                fixed={logoImage.childImageSharp.fixed}
+                                alt="Mini logo"
+                            />
                         </Grid>
                     </Grid>
                 </Root>

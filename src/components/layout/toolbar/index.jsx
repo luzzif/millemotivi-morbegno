@@ -59,7 +59,10 @@ export const Toolbar = () => {
                 hero={hero}
             >
                 <Grid item>
-                    <Image fixed={logoImage.childImageSharp.fixed} />
+                    <Image
+                        fixed={logoImage.childImageSharp.fixed}
+                        alt="Mini logo"
+                    />
                 </Grid>
                 <Hidden smDown>
                     <Grid item container spacingRatio={4}>

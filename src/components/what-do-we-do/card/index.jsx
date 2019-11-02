@@ -7,7 +7,10 @@ import { Title } from "../../title";
 export const Card = ({ image, title, description }) => (
     <Root container direction="column" spacingRatio={8}>
         <Grid item xs={12}>
-            <Image sizes={{ ...image, aspectRatio: 4 / 3 }} />
+            <Image
+                sizes={{ ...image, aspectRatio: 4 / 3 }}
+                alt="Card header image"
+            />
         </Grid>
         <TextContainer
             item

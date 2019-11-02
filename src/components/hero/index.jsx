@@ -27,7 +27,10 @@ export const Hero = () => {
 
     return (
         <RootGrid container direction="column" justify="center" align="center">
-            <BackgroundImage fluid={heroImage.childImageSharp.fluid} />
+            <BackgroundImage
+                fluid={heroImage.childImageSharp.fluid}
+                alt="Background image"
+            />
             <Overlay />
             <WritingsGrid
                 item

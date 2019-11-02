@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: "MorbegnoPrint",
         description:
-            "MorbegnoPrint... Stampa e personalizzazione, proprio come vuoi tu.",
+            "Da Morbegnoprint trovi tuttoMorbegnoPrint... Stampa e personalizzazione, proprio come vuoi tu.",
         author: "@luzzif"
     },
     plugins: [
