@@ -15,7 +15,7 @@ import logoImage from "../../images/logo.svg";
 export const Hero = () => {
     const { heroImage } = useStaticQuery(graphql`
         query {
-            heroImage: file(relativePath: { eq: "hero.jpg" }) {
+            heroImage: file(relativePath: { eq: "hero.png" }) {
                 childImageSharp {
                     fluid(quality: 90) {
                         ...GatsbyImageSharpFluid

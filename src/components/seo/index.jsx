@@ -1,10 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-export const Seo = ({ lang, meta }) => {
-    const { site } = useStaticQuery(
+export const Seo = () => {
+    const { site, favicon16, favicon32, favicon64 } = useStaticQuery(
         graphql`
             query {
                 site {
@@ -14,6 +13,27 @@ export const Seo = ({ lang, meta }) => {
                         author
                     }
                 }
+                favicon16: file(relativePath: { eq: "favicon/16.png" }) {
+                    childImageSharp {
+                        fixed(height: 16) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
+                favicon32: file(relativePath: { eq: "favicon/32.png" }) {
+                    childImageSharp {
+                        fixed(height: 32) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
+                favicon64: file(relativePath: { eq: "favicon/64.png" }) {
+                    childImageSharp {
+                        fixed(height: 64) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
             }
         `
     );
@@ -21,43 +41,39 @@ export const Seo = ({ lang, meta }) => {
     return (
         <Helmet
             htmlAttributes={{
-                lang
+                lang: "it"
             }}
             title={site.siteMetadata.title}
+            link={[
+                {
+                    rel: "shortcut icon",
+                    type: "image/png",
+                    sizes: "16x16",
+                    href: `${favicon16.childImageSharp.fixed.base64}`
+                },
+                {
+                    rel: "icon",
+                    type: "image/png",
+                    sizes: "32x32",
+                    href: `${favicon32.childImageSharp.fixed.base64}`
+                },
+                {
+                    rel: "shortcut icon",
+                    type: "image/png",
+                    href: `${favicon64.childImageSharp.fixed.base64}`
+                }
+            ]}
             meta={[
                 {
                     name: `description`,
                     content: site.siteMetadata.description
                 },
                 {
-                    property: `og:title`,
-                    content: site.siteMetadata.title
-                },
-                {
-                    property: `og:description`,
-                    content: site.siteMetadata.description
-                },
-                {
-                    property: `og:type`,
-                    content: `website`
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author
-                },
-                {
-                    name: `twitter:title`,
-                    content: site.siteMetadata.title
-                },
-                {
-                    name: `twitter:description`,
-                    content: site.siteMetadata.description
+                    name: "keywords",
+                    content:
+                        "morbegnoprint, digital, printing, stampa, digitale"
                 }
-            ].concat(meta)}
+            ]}
         >
             <link
                 href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
@@ -65,14 +81,4 @@ export const Seo = ({ lang, meta }) => {
             />
         </Helmet>
     );
-};
-
-Seo.defaultProps = {
-    lang: "it",
-    meta: []
-};
-
-Seo.propTypes = {
-    lang: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object)
 };
