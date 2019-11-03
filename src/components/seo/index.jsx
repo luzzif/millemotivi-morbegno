@@ -77,6 +77,10 @@ export const Seo = () => {
                     name: "keywords",
                     content:
                         "morbegnoprint, digital, printing, stampa, digitale"
+                },
+                {
+                    name: "theme-color",
+                    content: "#ef7c00"
                 }
             ]}
         />
