@@ -4,6 +4,7 @@ import { Input, StyledLink, TextArea, SubmitButton, TextGrid } from "./styled";
 import emailValidator from "email-validator";
 import { Title } from "../title";
 import { mailForwarderClient } from "../../clients";
+import { toast } from "react-toastify";
 
 export const ContactUs = () => {
     const [name, setName] = useState("");
@@ -11,18 +12,23 @@ export const ContactUs = () => {
     const [text, setText] = useState("");
     const [submitEnabled, setSubmitEnable] = useState("");
 
-    const sendMail = async (from, name, text) => {
-        try {
-            await mailForwarderClient.post("/api/v1/emails", {
-                from,
+    const handleSubmit = useCallback(() => {
+        mailForwarderClient
+            .post("/api/v1/emails", {
+                from: email,
                 name,
                 text
+            })
+            .then(() => {
+                toast.success(
+                    "Il messaggio è stato recapitato, ti risponderemo al più presto."
+                );
+            })
+            .catch(() => {
+                toast.error(
+                    "Si è verificato un errore e il messaggio non è stato recapitato. Per favore, riprova più tardi"
+                );
             });
-        } catch (error) {}
-    };
-
-    const handleSubmit = useCallback(() => {
-        sendMail(email, name, text);
     }, [email, name, text]);
 
     const handleNameChange = event => {
