@@ -2,9 +2,16 @@ const emailClient = require("@sendgrid/mail");
 emailClient.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async (event, context, callback) => {
-    const {
-        body: { from, name, text }
-    } = event;
+    const { body } = event;
+    if (!body) {
+        return callback(null, {
+            statusCode: 400,
+            body: JSON.stringify({
+                message: "Missing request body"
+            })
+        });
+    }
+    const { from, name, text } = JSON.parse(body);
     const missingParams = [];
     if (!from) {
         missingParams.push("from");
