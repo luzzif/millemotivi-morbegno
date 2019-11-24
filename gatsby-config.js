@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: "Morbegnoprint | Stampa e personalizzazione",
         description:
-            "Da Morbegnoprint trovi tutto quello che desideri sul mondo della stampa digitale. Morbegnoprint... stampa e personalizzazione, proprio come vuoi tu.",
+            "Da Morbegnoprint trovi tutto quello che desideri sul mondo della stampa digitale. Gadget, abbigliamento o semplice stampa di ogni tipo, da Morbegnoprint trovi professionalità e passione.",
         author: "@luzzif",
         siteUrl: "https://www.morbegnoprint.it"
     },

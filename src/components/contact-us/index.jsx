@@ -13,6 +13,9 @@ export const ContactUs = () => {
     const [submitEnabled, setSubmitEnable] = useState("");
 
     const handleSubmit = useCallback(() => {
+        const loadingToast = toast.info(
+            "Invio messaggio in corso, attendere prego..."
+        );
         mailForwarderClient
             .post("/api/v1/emails", {
                 from: email,
@@ -20,11 +23,13 @@ export const ContactUs = () => {
                 text
             })
             .then(() => {
+                toast.dismiss(loadingToast);
                 toast.success(
                     "Il messaggio è stato recapitato, ti risponderemo al più presto."
                 );
             })
             .catch(() => {
+                toast.dismiss(loadingToast);
                 toast.error(
                     "Si è verificato un errore e il messaggio non è stato recapitato. Per favore, riprova più tardi"
                 );

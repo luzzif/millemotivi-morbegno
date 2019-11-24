@@ -39,7 +39,7 @@ export const InstagramFeed = () => {
     useEffect(() => {
         const { innerWidth } = windowSize;
         let postsAmount = 6;
-        if (innerWidth <= theme.breakpoints.md) {
+        if (innerWidth < theme.breakpoints.md) {
             postsAmount = 4;
         }
         const rawPostsAmount = posts.length;
