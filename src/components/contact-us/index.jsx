@@ -30,7 +30,7 @@ export const ContactUs = () => {
                 return response.json();
             })
             .then(json => {
-                json.toast.dismiss(loadingToast);
+                toast.dismiss(loadingToast);
                 toast.success(
                     "Il messaggio è stato recapitato, ti risponderemo al più presto."
                 );
