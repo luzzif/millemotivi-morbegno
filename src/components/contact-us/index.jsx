@@ -15,7 +15,7 @@ export const ContactUs = () => {
         const loadingToast = toast.info(
             "Invio messaggio in corso, attendere prego..."
         );
-        fetch("/.netlify/functions", {
+        fetch("/.netlify/functions/send-email", {
             method: "POST",
             body: {
                 from: email,
