@@ -25,7 +25,7 @@ export const Seo = ({ description, lang, meta, title, link }) => {
             htmlAttributes={{
                 lang: "it"
             }}
-            title={title}
+            title={site.siteMetadata.title}
             link={link}
             meta={[
                 {
