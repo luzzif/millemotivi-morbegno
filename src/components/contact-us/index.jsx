@@ -15,7 +15,7 @@ export const ContactUs = () => {
         const loadingToast = toast.info(
             "Invio messaggio in corso, attendere prego..."
         );
-        fetch(".netlify/functions", {
+        fetch("/.netlify/functions", {
             method: "POST",
             body: {
                 from: email,
@@ -23,8 +23,14 @@ export const ContactUs = () => {
                 text
             }
         })
-            .then(() => {
-                toast.dismiss(loadingToast);
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error();
+                }
+                return response.json();
+            })
+            .then(json => {
+                json.toast.dismiss(loadingToast);
                 toast.success(
                     "Il messaggio è stato recapitato, ti risponderemo al più presto."
                 );
