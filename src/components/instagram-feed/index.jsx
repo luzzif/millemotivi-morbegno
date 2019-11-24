@@ -14,11 +14,8 @@ import { theme } from "../../styles/theme";
 import useWindowSize from "@rehooks/window-size";
 
 export const InstagramFeed = () => {
-    let windowSize = { outerWidth: 0 };
-    if (typeof window !== "undefined") {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        windowSize = useWindowSize();
-    }
+    let windowSize =
+        typeof window === "undefined" ? { outerWidth: 0 } : useWindowSize();
 
     const posts = useStaticQuery(graphql`
         query {
