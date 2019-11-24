@@ -6,7 +6,7 @@ exports.handler = async (event, context, callback) => {
         body: { from, name, text }
     } = event;
     if (!from || !name || !text) {
-        return callback({
+        return callback(null, {
             statusCode: 400
         });
     }
@@ -17,9 +17,9 @@ exports.handler = async (event, context, callback) => {
             subject: `Richiesta di informazioni da ${name}`,
             text
         });
-        callback({ statusCode: 204 });
+        callback(null, { statusCode: 204 });
     } catch (error) {
         console.log("error sending email", error);
-        callback({ statusCode: 500 });
+        callback(null, { statusCode: 500 });
     }
 };
