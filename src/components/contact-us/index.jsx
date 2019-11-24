@@ -3,7 +3,6 @@ import { Grid } from "../grid";
 import { Input, StyledLink, TextArea, SubmitButton, TextGrid } from "./styled";
 import emailValidator from "email-validator";
 import { Title } from "../title";
-import { mailForwarderClient } from "../../clients";
 import { toast } from "react-toastify";
 
 export const ContactUs = () => {
@@ -16,12 +15,14 @@ export const ContactUs = () => {
         const loadingToast = toast.info(
             "Invio messaggio in corso, attendere prego..."
         );
-        mailForwarderClient
-            .post("/api/v1/emails", {
+        fetch(".netlify/functions", {
+            method: "POST",
+            body: {
                 from: email,
                 name,
                 text
-            })
+            }
+        })
             .then(() => {
                 toast.dismiss(loadingToast);
                 toast.success(
