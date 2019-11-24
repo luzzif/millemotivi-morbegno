@@ -56,7 +56,5 @@ export const SubmitButton = styled.button`
 `;
 
 export const TextGrid = styled(Grid)`
-    @media (max-width: ${props => props.theme.breakpoints.sm}px) {
-        text-align: center;
-    }
+    text-align: center;
 `;
