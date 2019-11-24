@@ -18,11 +18,11 @@ exports.handler = async (event, context, callback) => {
     if (missingParams.length > 0) {
         return callback(null, {
             statusCode: 400,
-            body: {
+            body: JSON.stringify({
                 message: `Missing request body params: ${missingParams.join(
                     ", "
                 )}`
-            }
+            })
         });
     }
     try {
