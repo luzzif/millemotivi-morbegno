@@ -32,7 +32,8 @@ export const ContactUs = () => {
                     "Il messaggio è stato recapitato, ti risponderemo al più presto."
                 );
             })
-            .catch(() => {
+            .catch(error => {
+                console.log(error);
                 toast.error(
                     "Si è verificato un errore e il messaggio non è stato recapitato. Per favore, riprova più tardi"
                 );
