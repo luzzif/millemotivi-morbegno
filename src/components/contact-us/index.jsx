@@ -17,11 +17,11 @@ export const ContactUs = () => {
         );
         fetch("/.netlify/functions/send-email", {
             method: "POST",
-            body: {
+            body: JSON.stringify({
                 from: email,
                 name,
                 text
-            }
+            })
         })
             .then(response => {
                 if (!response.ok) {
