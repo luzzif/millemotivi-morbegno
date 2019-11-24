@@ -25,9 +25,6 @@ export const ContactUs = () => {
                 if (!response.ok) {
                     throw new Error();
                 }
-                return response.json();
-            })
-            .then(json => {
                 toast.success(
                     "Il messaggio è stato recapitato, ti risponderemo al più presto."
                 );
