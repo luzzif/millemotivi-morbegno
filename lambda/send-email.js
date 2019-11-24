@@ -5,9 +5,24 @@ exports.handler = async (event, context, callback) => {
     const {
         body: { from, name, text }
     } = event;
-    if (!from || !name || !text) {
+    const missingParams = [];
+    if (!from) {
+        missingParams.push("from");
+    }
+    if (!name) {
+        missingParams.push("name");
+    }
+    if (!text) {
+        missingParams.push("text");
+    }
+    if (missingParams.length > 0) {
         return callback(null, {
-            statusCode: 400
+            statusCode: 400,
+            body: {
+                message: `Missing request body params: ${missingParams.join(
+                    ", "
+                )}`
+            }
         });
     }
     try {
