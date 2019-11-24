@@ -9,6 +9,7 @@ export const Root = styled.div`
 
 export const TextContainer = styled(Grid)`
     padding: ${props => props.theme.spacing.unit * 6}px;
+    overflow: hidden;
 `;
 
 export const Description = styled.p`
