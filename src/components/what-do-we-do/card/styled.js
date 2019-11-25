@@ -1,18 +1,23 @@
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { Grid } from "../../grid";
+import { Title as DefaultTitle } from "../../title";
 
 export const Root = styled.div`
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
 `;
 
+export const Title = styled(DefaultTitle)`
+    max-width: 100%;
+`;
+
 export const TextContainer = styled(Grid)`
     padding: ${props => props.theme.spacing.unit * 6}px;
-    overflow: hidden;
 `;
 
 export const Description = styled.p`
+    max-width: 100%;
     margin-bottom: 0;
     margin-top: ${props => props.theme.spacing.unit * 4}px;
 `;
