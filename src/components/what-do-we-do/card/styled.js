@@ -17,7 +17,6 @@ export const TextContainer = styled(Grid)`
 `;
 
 export const Description = styled.p`
-    max-width: 100%;
     margin-bottom: 0;
     margin-top: ${props => props.theme.spacing.unit * 4}px;
 `;
