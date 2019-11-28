@@ -83,7 +83,7 @@ export const WhatWeCanDoForYou = () => {
                         xs={11}
                         md={10}
                         lg={8}
-                        xl={4}
+                        xl={6}
                     >
                         {cards.map(card => (
                             <Grid item xs={12} sm={4} key={card.key}>
