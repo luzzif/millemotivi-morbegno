@@ -1,19 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-    Root,
-    Description,
-    Image,
-    TextContainer,
-    ImageContainer
-} from "./styled";
+import { Root, Description, Image, TextContainer } from "./styled";
 import { Title } from "./styled";
 
 export const Card = ({ image, title, description }) => (
     <Root container direction="column" spacingRatio={8}>
-        <ImageContainer item xs={12}>
-            <Image fluid={image} alt="Card header image" />
-        </ImageContainer>
+        <Image
+            sizes={{ ...image, aspectRatio: 16 / 9 }}
+            alt="Card header image"
+        />
         <TextContainer
             item
             container

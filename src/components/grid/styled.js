@@ -16,11 +16,13 @@ const getPercentageWidthFromRatio = ratio => {
     }
     return css`
         width: ${(ratio / 12) * 100}%;
+        max-width: ${(ratio / 12) * 100}%;
     `;
 };
 
 export const Container = styled.div`
     display: flex;
+    max-width: 100%;
     flex-direction: ${({ direction }) => direction};
     ${props =>
         props.wrap &&
