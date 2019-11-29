@@ -4,6 +4,7 @@ import { Grid } from "../../grid";
 import { Title as DefaultTitle } from "../../title";
 
 export const Root = styled(Grid)`
+    width: 100%;
     border: 1px solid #e0e0e0;
     border-radius: ${props => props.theme.spacing.unit * 4}px;
 `;
