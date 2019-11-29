@@ -9,20 +9,23 @@ export const Root = styled(Grid)`
 `;
 
 export const Title = styled(DefaultTitle)`
-    max-width: 100%;
+    width: 100%;
 `;
 
 export const TextContainer = styled(Grid)`
+    width: 100%;
     padding: ${props => props.theme.spacing.unit * 6}px;
 `;
 
 export const Description = styled.p`
+    width: 100%;
     margin-bottom: 0;
     margin-top: ${props => props.theme.spacing.unit * 4}px;
 `;
 
 export const Image = styled(Img)`
     width: 100%;
+    max-width: 100%;
     border-top-left-radius: ${props => props.theme.spacing.unit * 4}px;
     border-top-right-radius: ${props => props.theme.spacing.unit * 4}px;
 `;
