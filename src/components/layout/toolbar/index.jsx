@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useWindowScrollPosition from "@rehooks/window-scroll-position";
 import {
     Container,
     Item,
@@ -13,12 +12,6 @@ import { Hidden } from "../../hidden";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Toolbar = () => {
-    let scrollPosition = { x: 0, y: 0 };
-    if (typeof window !== "undefined") {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        scrollPosition = useWindowScrollPosition();
-    }
-
     const { logoImage } = useStaticQuery(graphql`
         query {
             logoImage: file(relativePath: { eq: "logo-mini.png" }) {
@@ -31,12 +24,19 @@ export const Toolbar = () => {
         }
     `);
 
-    const [hero, setHero] = useState(scrollPosition && !scrollPosition.y);
+    const [hero, setHero] = useState(typeof window !== "undefined" && typeof window.pageYOffset);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
-        setHero(scrollPosition && !scrollPosition.y);
-    }, [scrollPosition]);
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        setHero(!window.pageYOffset);
+    };
 
     const handleMobileMenuOpen = () => {
         setMobileMenuOpen(true);
