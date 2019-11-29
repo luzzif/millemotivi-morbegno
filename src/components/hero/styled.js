@@ -6,7 +6,7 @@ export const RootGrid = styled(Grid)`
     width: 100%;
     height: 100vh;
     @media (min-width: ${props => props.theme.breakpoints.sm}px) {
-        height: 80vh;
+        height: 85vh;
     }
     position: relative;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
