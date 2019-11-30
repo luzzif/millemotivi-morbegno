@@ -25,7 +25,7 @@ export const Toolbar = () => {
     `);
 
     const [hero, setHero] = useState(
-        typeof window !== "undefined" && !window.pageYOffset
+        !(typeof window !== "undefined" && window.pageYOffset)
     );
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
