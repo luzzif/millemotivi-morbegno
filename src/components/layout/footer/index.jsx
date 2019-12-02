@@ -107,7 +107,7 @@ export const Footer = () => {
                     <Grid
                         item
                         container
-                        xs={11}
+                        xs={12}
                         justify="space-between"
                         direction="column"
                         spacingRatio={6}
@@ -139,6 +139,8 @@ export const Footer = () => {
                             </Grid>
                             <Grid item>
                                 <strong>E-mail</strong>:{" "}
+                            </Grid>
+                            <Grid>
                                 <StyledLink href="mailto:morbegnoprint@gmail.com">
                                     morbegnoprint@gmail.com
                                 </StyledLink>
@@ -149,10 +151,11 @@ export const Footer = () => {
                         </Grid>
                         <Grid
                             item
+                            direction="column"
                             container
                             spacingRatio={4}
                             xs={12}
-                            justify="center"
+                            align="center"
                         >
                             <Grid item>
                                 <SocialLink type="facebook" />
