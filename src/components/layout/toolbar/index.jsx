@@ -74,9 +74,6 @@ export const Toolbar = () => {
                         <Grid item>
                             <Item to="/#contact-us">Contattaci</Item>
                         </Grid>
-                        <Grid item>
-                            <Item to="/#our-socials">Dai nostri social</Item>
-                        </Grid>
                     </Grid>
                 </Hidden>
                 <Hidden smUp>

@@ -17,11 +17,6 @@ export const MobileMenu = ({ onClose, ...rest }) => (
                     Contattaci
                 </Item>
             </Grid>
-            <Grid item>
-                <Item to="/#our-socials" onClick={onClose}>
-                    Dai nostri social
-                </Item>
-            </Grid>
         </Grid>
         <Grid container xs={10} justify="flex-end">
             <Grid item>
