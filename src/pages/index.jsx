@@ -6,6 +6,7 @@ import { WhatWeCanDoForYou } from "../components/what-do-we-do";
 import { ContactUs } from "../components/contact-us";
 import { Section } from "../components/section";
 import { useStaticQuery, graphql } from "gatsby";
+import { Shop } from "../components/shop";
 
 const Index = () => {
     const { favicon16, favicon32, favicon64 } = useStaticQuery(
@@ -65,6 +66,9 @@ const Index = () => {
                 ]}
             />
             <Hero />
+            <Section>
+                <Shop />
+            </Section>
             <Section>
                 <WhatWeCanDoForYou />
             </Section>

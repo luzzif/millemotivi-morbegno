@@ -8,6 +8,11 @@ export const MobileMenu = ({ onClose, ...rest }) => (
     <Root container direction="column" align="center" {...rest}>
         <Grid item container direction="column" align="center" spacingRatio={4}>
             <Grid item>
+                <Item to="/#shop" onClick={onClose}>
+                    Negozio
+                </Item>
+            </Grid>
+            <Grid item>
                 <Item to="/#what-do-we-do" onClick={onClose}>
                     Cosa facciamo
                 </Item>

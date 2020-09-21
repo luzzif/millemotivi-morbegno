@@ -69,6 +69,9 @@ export const Toolbar = () => {
                 <Hidden smDown>
                     <Grid item container spacingRatio={4}>
                         <Grid item>
+                            <Item to="/#shop">Negozio</Item>
+                        </Grid>
+                        <Grid item>
                             <Item to="/#what-do-we-do">Cosa facciamo</Item>
                         </Grid>
                         <Grid item>
