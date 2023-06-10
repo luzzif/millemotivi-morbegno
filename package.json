@@ -11,7 +11,7 @@
         "@fortawesome/react-fontawesome": "^0.1.9",
         "@sendgrid/mail": "^7.0.1",
         "email-validator": "^2.0.4",
-        "gatsby": "^2.20.31",
+        "gatsby": "^4.25.7",
         "gatsby-image": "^2.3.5",
         "gatsby-plugin-react-helmet": "^3.2.5",
         "gatsby-plugin-sharp": "^2.5.7",
